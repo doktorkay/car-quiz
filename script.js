@@ -54,7 +54,7 @@ class CarQuiz {
             drive: v => `${v}`,
             cylinders: v => `${v} cilindri`,
             max_speed_kmh: v => `${v} km/h`,
-            acceleration_0_100: v => `${v}s 0-100 km/h`,
+            acceleration_0_100: v => `0-100 km/h in ${v}s`,
             weight_kg: v => `${v} kg`,
             production_units: v => `${v.toLocaleString()} unità prodotte`,
             current_price_euro: v => `€${(v/1000).toFixed(0)}k`
