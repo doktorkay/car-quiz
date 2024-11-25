@@ -51,6 +51,7 @@ class CarQuiz {
             power_hp: v => `${v} CV`,
             torque_nm: v => `${v} Nm`,
             displacement_cc: v => `${(v/1000).toFixed(1)}L`,
+            intake: v => `${v}`,
             drive: v => `${v}`,
             cylinders: v => `${v} cilindri`,
             max_speed_kmh: v => `${v} km/h`,
@@ -97,6 +98,7 @@ class CarQuiz {
             // Specifica quali campi mostrare e in che ordine
             const specsToShow = [
                 { key: 'engine_type', label: 'Motore' },
+                { key: 'intake', label: 'Turbo' },
                 { key: 'displacement_cc', label: 'Cilindrata' },
                 { key: 'drive', label: 'Trazione' },
                 { key: 'power_hp', label: 'Potenza' },
