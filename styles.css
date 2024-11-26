@@ -24,6 +24,7 @@
 
 h1{
     font-size: 1.8em;
+    color: #0c46dd;
 }
 
 body {
@@ -189,6 +190,199 @@ body {
 
 .error-message button:hover {
     background-color: #ff6666;
+}
+
+/* ... [stili esistenti rimangono invariati] ... */
+
+/* Stili aggiornati per i filtri */
+.filters-container {
+    background-color: white;
+    padding: 25px 40px 40px; /* Ridotto il padding superiore */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.filters-container h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.filter-group {
+    margin-bottom: 0;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-input, .year-select {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    min-width: 120px;
+    background-color: white;
+}
+
+.year-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+    padding-right: 35px;
+}
+
+.filter-input:focus, .year-select:focus {
+    border-color: #666;
+    outline: none;
+}
+
+.range-inputs span {
+    color: #666;
+    font-weight: bold;
+}
+
+/* Stili aggiornati per i checkbox */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Ridotto lo spazio tra i checkbox */
+    padding: 5px 0;
+    text-align: left;
+}
+
+.drive-type-group {
+    grid-column: span 2;
+}
+
+.checkbox-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.9em;
+    line-height: 1;
+    position: relative;
+    padding: 2px 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin: 0 0 0 0;
+    position: relative;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    top: 3px;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: #222;
+    border-color: #222;
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.checkbox-text {
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    top: 0;
+}
+
+.start-quiz-btn {
+    background-color: #0c46dd;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.start-quiz-btn:hover {
+    background-color: #064cff;
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .filters-container {
+        padding: 15px 20px 20px; /* Ridotto ulteriormente il padding su mobile */
+        margin: 10px;
+        width: auto;
+    }
+
+    .filters-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .drive-type-group {
+        grid-column: 1;
+    }
+
+    .filter-input, .year-select {
+        font-size: 0.9em;
+    }
+
+    .range-inputs {
+        gap: 10px;
+    }
+
+    .checkbox-group {
+        gap: 6px;
+    }
+
+    .start-quiz-btn {
+        font-size: 1.1em;
+        padding: 12px 24px;
+    }
 }
 
 @media (max-width: 700px) {
